@@ -2,9 +2,7 @@
 // let firstname = "Roger";
 // let student = true;
 
-// age = age + 1 
-
-
+// age = age + 1
 
 // console.log(age);
 // console.log(firstname);
@@ -22,7 +20,7 @@
 
 // let username = "Roger";
 // let item = 3;
-// let total =100; 
+// let total =100;
 
 // let text = `
 // Hello ${username}  <br>
@@ -31,7 +29,6 @@
 // `;
 // console.log(text);
 // document.getElementById("myPar").innerHTML = text
-
 
 /************************************** */
 // toLocaleString
@@ -53,11 +50,11 @@
 
 // console.log(myNum);
 
- /*******************************
-  * Arrays
-  *******************************/
+/*******************************
+ * Arrays
+ *******************************/
 
- let fruits = ["apple", "mango", "banana", "orange"];
+let fruits = ["apple", "mango", "banana", "orange"];
 //  console.log(fruits);
 
 //  fruits[1] = "cocunut";
@@ -66,13 +63,12 @@
 // console.log(fruits);
 // fruits.pop(); //  remove last element
 // fruits.shift(); // remove element from the beginning
- 
 
-let prices = [5, 6, 78, 45, 65, 34]
+let prices = [5, 6, 78, 45, 65, 34];
 
 // for (let i = 0; i < prices.length; i++) {
 //     console.log(`the price number ${i + 1} is ${prices[i]}`);
-    
+
 // }
 
 // for(let fruit of fruits){
@@ -84,10 +80,10 @@ let prices = [5, 6, 78, 45, 65, 34]
 // for(let fruit of fruits){
 //     console.log(fruit);
 // }
- 
- /*******************************
-  * 2D Arrays
-  *******************************/
+
+/*******************************
+ * 2D Arrays
+ *******************************/
 
 // let vegetables = ["carrots", "onions", "potatoes", "amaranth"];
 
@@ -101,9 +97,9 @@ let prices = [5, 6, 78, 45, 65, 34]
 //     }
 // }
 
- /*******************************
-  * spread operator
-  *******************************/
+/*******************************
+ * spread operator
+ *******************************/
 //  let numbers = [1,2,3,4,5,6,7,8,9];
 //  console.log(numbers);
 //  console.log(...numbers);
@@ -124,8 +120,8 @@ let prices = [5, 6, 78, 45, 65, 34]
 //  console.log(class1);
 
 /*******************************
-  * rest parameters
-  *******************************/
+ * rest parameters
+ *******************************/
 // let a = 1;
 // let b = 2;
 // let c = 3;
@@ -141,14 +137,13 @@ let prices = [5, 6, 78, 45, 65, 34]
 //     return total;
 // }
 
-
 // console.log(sum(a , b));
 // console.log(sum(a , b, c));
 // console.log(sum(a , b, c, d));
 
 /*******************************
-  * callback
-  *******************************/
+ * callback
+ *******************************/
 
 // function sum(x, y, display){
 //     let total = x + y;
@@ -166,10 +161,9 @@ let prices = [5, 6, 78, 45, 65, 34]
 // sum(2, 3, displayDOM);
 // sum(2, 3, displayConsole);
 
-
 /*******************************
-  * array.foreach
-  *******************************/
+ * array.foreach
+ *******************************/
 
 // let student = ["roger", "Karen", "Aba", "Freddy", "Mushagalusa"];
 // student.forEach(capitalize);
@@ -184,8 +178,8 @@ let prices = [5, 6, 78, 45, 65, 34]
 // }
 
 /*******************************
-  * array.map
-  *******************************/
+ * array.map
+ *******************************/
 
 // function square(element){
 //     return Math.pow(element, 2);
@@ -202,13 +196,12 @@ let prices = [5, 6, 78, 45, 65, 34]
 // let squares = prices.map(square);
 // squares.forEach(print);
 
-
 // let cubes = prices.map(cube);
 // cubes.forEach(print);
 
 /*******************************
-  * array.filter
-  *******************************/
+ * array.filter
+ *******************************/
 
 // let ages = [18, 19, 23, 24, 20, 16 , 17];
 // let adults = ages.filter(chekAge);
@@ -220,18 +213,122 @@ let prices = [5, 6, 78, 45, 65, 34]
 // function print(element){
 //     console.log(element);
 // }
-    
 
 /*******************************
-  * array.reduce
-  *******************************/
+ * array.reduce
+ *******************************/
+
+// let price = prices.reduce(checkOut);
+
+// console.log(`The total is : $ ${price}`);
+
+// function checkOut(total, element) {
+//     return total + element;
+// }
+
+/*******************************
+ * sorting numbers
+ *******************************/
+
+let grades = [100, 90, 50, 40, 80, 70, 60];
+
+// grades = grades.sort(ascendingSort);
+
+// grades.forEach(print);
+
+// function descendingSort(x, y){
+//     return y - x;
+// }
+
+// function print(element){
+//     console.log(element);
+// }
+
+// function ascendingSort(x, y){
+//     return x - y;
+// }
+
+/*******************************
+ * function expression
+ *******************************/
+
+// let count = 0;
+
+// document.getElementById("increaseButton").onclick = function(){
+//   count += 1;
+//   document.getElementById("myLabel").innerHTML = count;
+// }
+
+// document.getElementById("decreaseButton").onclick = function(){
+//   count -= 1;
+//   document.getElementById("myLabel").innerHTML = count;
+// }
+
+/*******************************
+ * arrow function expression
+ *******************************/
+// const greeting = (username) =>{
+//   console.log(`Hello ${username}`);
+// }
+
+// greeting("Roger")
+
+// const percent = (x , y ) => x / y * 100;
+
+// console.log(`${percent(75 , 100)}%`);
+
+// grades.sort((x, y) => y - x);
+
+// grades.forEach(element => console.log(element));
+
+/*******************************
+ * arrow function expression
+ *******************************/
+
+// let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+// shuffle(cards);
+
+// // console.log(cards);
+// cards.forEach(card => console.log(card));
+
+// function shuffle(array){
+//   let currentIndex = array.length;
+
+//   while(currentIndex != 0) {
+//     let randowmIndex = Math.floor(Math.random() * array.length);
+//     currentIndex -= 1;
+
+//     let temp = array[currentIndex];
+//     array[currentIndex] = array[randowmIndex];
+//     array[randowmIndex] = temp;
+//   }
+
+//   return array;
+// }
+
+/*******************************
+ * nested function
+ *******************************/
+
+// let username = "Roger";
+// let userInbox = 0;
+
+// login();
+
+// function login() {
+//   displayUsername();
+//   displayUserInbox();
+
+//   function displayUsername() {
+//     console.log(`welcome ${username}`);
+//   }
+  
+
+//   function displayUserInbox() {
+//     console.log(`You have ${userInbox} new messages`);
+//   }
+// }
 
 
-let price = prices.reduce(checkOut);
-
-console.log(`The total is : $ ${price}`);
-
-function checkOut(total, element) {
-    return total + element;
-}
 
