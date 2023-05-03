@@ -102,13 +102,16 @@ document.getElementById("convert").onclick = function(){
 
         let tempFar = celciusToFaranheit(temp);
         console.log(tempFar + "fa");
-        document.getElementById("farInput").innerHTML = tempFar
+        document.getElementById("farInput").value = tempFar
         let tempKe = celciusToKelvin(temp);
         console.log(tempKe + "k");
+        document.getElementById("keInput").value = tempKe
         let tempRe = celciusToReaumur(temp);
         console.log(tempRe + "re");
+        document.getElementById("reInput").value = tempRe
         let tempRa = celciusToRankine(temp);
         console.log(tempRa + "ra");
+        document.getElementById("raInput").value = tempRa
     }
 
     // faranheit conversion
@@ -118,12 +121,16 @@ document.getElementById("convert").onclick = function(){
 
         let tempce = faranheitToCelcius(temp);
         console.log(tempce + "ce");
+        document.getElementById("celInput").value = tempce
         let tempKe = faranheitToKelvin(temp);
         console.log(tempKe + "ke");
+        document.getElementById("keInput").value = tempKe
         let tempRe = faranheitToReaumur(temp);
         console.log(tempRe + "re");
+        document.getElementById("reInput").value = tempRe
         let tempRa = faranheitToRankine(temp);
         console.log(tempRa + "ra");
+        document.getElementById("raInput").value = tempRa
     }
 
     // kelvin conversion
@@ -133,12 +140,16 @@ document.getElementById("convert").onclick = function(){
 
         let tempce = kelvinToCelcius(temp);
         console.log(tempce + "ce");
+        document.getElementById("celInput").value = tempce
         let tempFar = kelvinToFarenheit(temp);
         console.log(tempFar + "Fa");
+        document.getElementById("farInput").value = tempFar
         let tempRe = kelvinToReaumur(temp);
         console.log(tempRe + "re");
+        document.getElementById("reInput").value = tempRe
         let tempRa = kelvinToRankine(temp);
         console.log(tempRa + "ra");
+        document.getElementById("raInput").value = tempRa
     }
 
     // reaumur conversion
@@ -148,12 +159,16 @@ document.getElementById("convert").onclick = function(){
 
         let tempce = reaumurToCelcius(temp);
         console.log(tempce + "ce");
+        document.getElementById("celInput").value = tempce
         let tempFar = reaumurToFarenheit(temp);
         console.log(tempFar + "Fa");
+        document.getElementById("farInput").value = tempFar
         let tempKe = reaumurToKelvin(temp);
         console.log(tempKe + "Ke");
+        document.getElementById("keInput").value = tempKe
         let tempRa = reaumurToRankine(temp);
         console.log(tempRa + "ra");
+        document.getElementById("raInput").value = tempRa
     }
 
     // rankine conversion
@@ -163,12 +178,16 @@ document.getElementById("convert").onclick = function(){
 
         let tempce = rankineToCelcius(temp);
         console.log(tempce + "ce");
+        document.getElementById("celInput").value = tempce
         let tempFar = rankineToFarenheit(temp);
         console.log(tempFar + "Fa");
+        document.getElementById("farInput").value = tempFar
         let tempKe = rankineToKelvin(temp);
         console.log(tempKe + "Ke");
+        document.getElementById("keInput").value = tempKe
         let tempRe = rankineToReaumur(temp);
         console.log(tempRe + "re");
+        document.getElementById("reInput").value = tempRe
     }
 
     // none input

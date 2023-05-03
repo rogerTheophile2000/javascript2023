@@ -323,12 +323,168 @@ let grades = [100, 90, 50, 40, 80, 70, 60];
 //   function displayUsername() {
 //     console.log(`welcome ${username}`);
 //   }
-  
 
 //   function displayUserInbox() {
 //     console.log(`You have ${userInbox} new messages`);
 //   }
 // }
 
+/*******************************
+ * Map
+ *******************************/
 
+const store = new Map([
+  ["t-shirt", 20],
+  ["jean", 30],
+  ["socks", 10],
+  ["underwear", 50],
+]);
 
+// // let shopingCart = 0;
+// // shopingCart += store.set("hat", 40);
+// // store.delete("hat");
+// console.log(store.size);
+
+// // console.log(shopingCart);
+// store.forEach((value, key) => console.log(`${key} $${value}`));
+
+/*******************************
+ * object
+ *******************************/
+
+// const car1 = {
+//   model: "Mustang",
+//   color: "red",
+//   year: 2023,
+
+//   drive: function () {
+//     console.log("You drive the car");
+//   },
+
+//   brake: function () {
+//     console.log("You step on the brakes");
+//   },
+// };
+// const car2 = {
+//   model: "Toyota",
+//   color: "blue",
+//   year: 2024,
+
+//   drive: function () {
+//     console.log(`You drive the car whih ${this.model}`);
+//   },
+
+//   brake: function () {
+//     console.log("You step on the brakes");
+//   },
+// };
+
+// console.log(car2.model);
+// console.log(car2.color);
+// console.log(car2.year);
+
+// car2.drive();
+// car2.brake();
+
+/*******************************
+ * classes
+ *******************************/
+
+class Student {
+  static numberofStudents = 0;
+  name;
+  score = 0;
+
+  constructor(name, age, gpa) {
+    this.name = name;
+    this.age = age;
+    this.gpa = gpa;
+    Student.numberofStudents += 1;
+  }
+
+  study() {
+    console.log(`${this.name} is studying`);
+  }
+
+  static startScourses() {
+    print("course start at 08h00 am");
+  }
+}
+
+// const student1 = new Student("Roger", 23, 3.4);
+// const student2 = new Student("Alvin",09, 4.1);
+
+// console.log(student1.name);
+// console.log(student1.age);
+// console.log(student1.gpa);
+
+// student1.study();
+
+// console.log(student2.name);
+// console.log(student2.age);
+// console.log(student2.gpa);
+
+// student2.study();
+
+// console.log(Student.numberofStudents);
+
+/*******************************
+ * inheritance
+ *******************************/
+
+class Animal {
+  name;
+  type;
+  age;
+  cry;
+
+  constructor(name, type, age, cry) {
+    this.name = name;
+    this.type = type;
+    this.age = age;
+    this.cry = cry;
+  }
+
+  eat() {
+    console.log(` ${this.name} is type of who can eat`);
+  }
+
+  sleep() {
+    console.log(`${this.name} sleeping`);
+  }
+}
+
+class Rabbit extends Animal {
+  run() {
+    console.log(`${this.name} can running`);
+  }
+}
+
+const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
+
+rabbit1.eat();
+
+/*******************************
+ * error handling
+ *******************************/
+// try {
+//   let x = window.prompt("enter a number");
+//   x = Number(x);
+
+//   if (isNaN(x)) {
+//     throw "That wasn't a number";
+//   }
+//   if (x == "") {
+//     throw "That was empty";
+//   }
+
+//   console.log(`${x} is a number`);
+// } catch (error) {
+//   console.log(error);
+// } finally{
+//   console.log("this always execute");
+// }
+
+/*******************************
+ * error handling
+ *******************************/
