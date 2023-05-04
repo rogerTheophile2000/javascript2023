@@ -462,7 +462,6 @@ class Rabbit extends Animal {
 
 const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
 
-rabbit1.eat();
 
 /*******************************
  * error handling
@@ -486,5 +485,106 @@ rabbit1.eat();
 // }
 
 /*******************************
- * error handling
+ * setTimeout()
  *******************************/
+
+// setTimeout(firstMessage, 3000);
+// setTimeout(secondMessage, 15000);
+// setTimeout(thirdMessage, 20000);
+// function firstMessage(){
+//   console.log(`Buy this course for $500 !`);
+// }
+// function secondMessage(){
+//   console.log(`This is not a scam!`);
+// }
+// function thirdMessage(){
+//   console.log(`DO IT !`);
+// }
+
+/*******************************
+ * setInterval()
+ *******************************/
+
+// let count = 0;
+// let max = 6;
+// const myTimer = setInterval(countUp, 2000);
+
+// function countUp(){
+//   count+=1;
+//   console.log(count);
+//   if(count >= max){
+//     clearInterval(myTimer);
+//   }
+// }
+
+/*******************************
+ * Date
+ *******************************/
+
+// let date = new Date();
+
+// let year = date.getFullYear();
+// let dayofMon = date.getDate();
+// let month = date.getMonth();
+// let hour = date.getHours();
+// let minutes = date.getMinutes();
+// let seconds = date.getSeconds();
+
+
+// date = date.toLocaleString();
+// console.log(date);
+
+/*******************************
+ * add and change HTML element
+ *******************************/
+
+// const nameTag =document.createElement("h1");
+// nameTag.innerHTML= window.prompt("Enter your full name");
+// document.body.append(nameTag);
+
+// const myList = document.querySelector("#fruits");
+// const listItem =  document.createElement("li");
+// listItem.textContent = "Mango";
+// // myList.append(listItem);
+// // myList.prepend(listItem);
+
+// myList.insertBefore(listItem, myList.getElementsByTagName("li")[2]);
+
+/*******************************
+ * change css property of element
+ *******************************/
+// const title = document.getElementById("myTitle");
+
+// title.style.backgroundColor = "#1B5BB5";
+// title.style.color = "#fff";
+// title.style.fontFamily = "verdana";
+// title.style.textAlign = "center";
+// title.style.margin = "1rem";
+// title.style.padding = "1rem";
+
+/*******************************
+ * events
+ *******************************/
+// const element = document.getElementById("myButton");
+// element.onclick = doSomething;  
+
+// function doSomething(){
+//   alert("hello")
+// }
+
+/*******************************
+ * add eventListner
+ *******************************/
+
+const element = document.getElementById("innerDiv");
+
+element.addEventListener("mouseover", () => {
+element.style.backgroundColor = "red";
+})
+
+element.addEventListener("click", () => {
+  element.style.backgroundColor = "green";
+})
+element.addEventListener("mouseout", () => {
+  element.style.backgroundColor = "steelblue";
+})
