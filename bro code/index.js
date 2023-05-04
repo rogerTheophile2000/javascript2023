@@ -576,15 +576,38 @@ const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
  * add eventListner
  *******************************/
 
-const element = document.getElementById("innerDiv");
+// const element = document.getElementById("innerDiv");
 
-element.addEventListener("mouseover", () => {
-element.style.backgroundColor = "red";
-})
+// element.addEventListener("mouseover", () => {
+// element.style.backgroundColor = "red";
+// })
 
-element.addEventListener("click", () => {
-  element.style.backgroundColor = "green";
-})
-element.addEventListener("mouseout", () => {
-  element.style.backgroundColor = "steelblue";
+// element.addEventListener("click", () => {
+//   element.style.backgroundColor = "green";
+// })
+// element.addEventListener("mouseout", () => {
+//   element.style.backgroundColor = "steelblue";
+// })
+
+/*******************************
+ *display none
+ *******************************/
+
+const image = document.getElementById("myImage");
+const button = document.querySelector("#myButton");
+
+// button.addEventListener("click",()=>{
+//   if (image.style.display == "none") {
+//     image.style.display = "block";
+//   } else {
+//     image.style.display = "none";
+//   }
+// })
+
+button.addEventListener("click",()=>{
+  if (image.style.visibility == "hidden") {
+    image.style.visibility = "visible";
+  } else {
+    image.style.visibility = "hidden";
+  }
 })
