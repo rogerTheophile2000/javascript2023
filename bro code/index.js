@@ -645,27 +645,37 @@ let prices = [5, 6, 78, 45, 65, 34];
  *animation
  *******************************/
 
-const innerDiv = document.getElementById("innerDiv");
-const button = document.getElementById("myButton");
+// const innerDiv = document.getElementById("innerDiv");
+// const button = document.getElementById("myButton");
 
-button.addEventListener("click", () => {
-  let timerId = null;
-  let x = 0;
-  let y = 0;
+// button.addEventListener("click", () => {
+//   let timerId = null;
+//   let x = 0;
+//   let y = 0;
 
-  timerId = setInterval(frame, 5);
+//   timerId = setInterval(frame, 5);
 
-  function frame() {
-    if (y >= 200 || x >= 200) {
-      clearInterval(timerId);
-    } else {
-      y += 1;
-      x += 1;
-      innerDiv.style.top = y + "px";
-      innerDiv.style.left = x + "px";
-      console.log(x);
-      console.log(y);
-    }
-  }
-});
+//   function frame() {
+//     if (y >= 200 || x >= 200) {
+//       clearInterval(timerId);
+//     } else {
+//       y += 1;
+//       x += 1;
+//       innerDiv.style.top = y + "px";
+//       innerDiv.style.left = x + "px";
+//       console.log(x);
+//       console.log(y);
+//     }
+//   }
+// });
 
+/*******************************
+ *windows
+ *******************************/
+const myButton = document.getElementById("myButtons");
+//  console.log(window.location.pathname);
+//  console.log(window.location.hostname);
+
+myButton.addEventListener("click", ()=> {
+  window.close();
+})
