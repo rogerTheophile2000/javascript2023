@@ -230,7 +230,7 @@ let prices = [5, 6, 78, 45, 65, 34];
  * sorting numbers
  *******************************/
 
-let grades = [100, 90, 50, 40, 80, 70, 60];
+// let grades = [100, 90, 50, 40, 80, 70, 60];
 
 // grades = grades.sort(ascendingSort);
 
@@ -333,12 +333,12 @@ let grades = [100, 90, 50, 40, 80, 70, 60];
  * Map
  *******************************/
 
-const store = new Map([
-  ["t-shirt", 20],
-  ["jean", 30],
-  ["socks", 10],
-  ["underwear", 50],
-]);
+// const store = new Map([
+//   ["t-shirt", 20],
+//   ["jean", 30],
+//   ["socks", 10],
+//   ["underwear", 50],
+// ]);
 
 // // let shopingCart = 0;
 // // shopingCart += store.set("hat", 40);
@@ -390,26 +390,26 @@ const store = new Map([
  * classes
  *******************************/
 
-class Student {
-  static numberofStudents = 0;
-  name;
-  score = 0;
+// class Student {
+//   static numberofStudents = 0;
+//   name;
+//   score = 0;
 
-  constructor(name, age, gpa) {
-    this.name = name;
-    this.age = age;
-    this.gpa = gpa;
-    Student.numberofStudents += 1;
-  }
+//   constructor(name, age, gpa) {
+//     this.name = name;
+//     this.age = age;
+//     this.gpa = gpa;
+//     Student.numberofStudents += 1;
+//   }
 
-  study() {
-    console.log(`${this.name} is studying`);
-  }
+//   study() {
+//     console.log(`${this.name} is studying`);
+//   }
 
-  static startScourses() {
-    print("course start at 08h00 am");
-  }
-}
+//   static startScourses() {
+//     print("course start at 08h00 am");
+//   }
+// }
 
 // const student1 = new Student("Roger", 23, 3.4);
 // const student2 = new Student("Alvin",09, 4.1);
@@ -432,36 +432,35 @@ class Student {
  * inheritance
  *******************************/
 
-class Animal {
-  name;
-  type;
-  age;
-  cry;
+// class Animal {
+//   name;
+//   type;
+//   age;
+//   cry;
 
-  constructor(name, type, age, cry) {
-    this.name = name;
-    this.type = type;
-    this.age = age;
-    this.cry = cry;
-  }
+//   constructor(name, type, age, cry) {
+//     this.name = name;
+//     this.type = type;
+//     this.age = age;
+//     this.cry = cry;
+//   }
 
-  eat() {
-    console.log(` ${this.name} is type of who can eat`);
-  }
+//   eat() {
+//     console.log(` ${this.name} is type of who can eat`);
+//   }
 
-  sleep() {
-    console.log(`${this.name} sleeping`);
-  }
-}
+//   sleep() {
+//     console.log(`${this.name} sleeping`);
+//   }
+// }
 
-class Rabbit extends Animal {
-  run() {
-    console.log(`${this.name} can running`);
-  }
-}
+// class Rabbit extends Animal {
+//   run() {
+//     console.log(`${this.name} can running`);
+//   }
+// }
 
-const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
-
+// const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
 
 /*******************************
  * error handling
@@ -530,7 +529,6 @@ const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
 // let minutes = date.getMinutes();
 // let seconds = date.getSeconds();
 
-
 // date = date.toLocaleString();
 // console.log(date);
 
@@ -566,7 +564,7 @@ const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
  * events
  *******************************/
 // const element = document.getElementById("myButton");
-// element.onclick = doSomething;  
+// element.onclick = doSomething;
 
 // function doSomething(){
 //   alert("hello")
@@ -593,8 +591,8 @@ const rabbit1 = new Rabbit("andy", "mamifere", 3, true);
  *display none
  *******************************/
 
-const image = document.getElementById("myImage");
-const button = document.querySelector("#myButton");
+// const image = document.getElementById("myImage");
+// const button = document.querySelector("#myButton");
 
 // button.addEventListener("click",()=>{
 //   if (image.style.display == "none") {
@@ -604,10 +602,70 @@ const button = document.querySelector("#myButton");
 //   }
 // })
 
-button.addEventListener("click",()=>{
-  if (image.style.visibility == "hidden") {
-    image.style.visibility = "visible";
-  } else {
-    image.style.visibility = "hidden";
+// button.addEventListener("click",()=>{
+//   if (image.style.visibility == "hidden") {
+//     image.style.visibility = "visible";
+//   } else {
+//     image.style.visibility = "hidden";
+//   }
+// })
+
+/*******************************
+ *key press
+ *******************************/
+
+// const innerDiv = document.getElementById("innerDiv");
+// window.addEventListener("keydown", move);
+// let x = 0;
+// let y = 0;
+
+// function move(event){
+//   switch(event.key){
+//     case "ArrowDown":
+//       y +=5;
+//       innerDiv.style.top = y + "px";
+//       break;
+//     case "ArrowUp":
+//       y -=5;
+//       innerDiv.style.top = y + "px";
+//       break;
+//     case "ArrowRight":
+//       x +=5;
+//       innerDiv.style.left = x + "px";
+//       break;
+
+//     case "Arrowleftt":
+//       x -=5;
+//       innerDiv.style.left = x + "px";
+//       break;
+//   }
+// }
+
+/*******************************
+ *animation
+ *******************************/
+
+const innerDiv = document.getElementById("innerDiv");
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", () => {
+  let timerId = null;
+  let x = 0;
+  let y = 0;
+
+  timerId = setInterval(frame, 5);
+
+  function frame() {
+    if (y >= 200 || x >= 200) {
+      clearInterval(timerId);
+    } else {
+      y += 1;
+      x += 1;
+      innerDiv.style.top = y + "px";
+      innerDiv.style.left = x + "px";
+      console.log(x);
+      console.log(y);
+    }
   }
-})
+});
+
