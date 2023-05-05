@@ -74,12 +74,15 @@ function checkWinner() {
     }
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins!`;
+        document.getElementById("status-text").style.color = "green";
         running = false;
     } else if(!options.includes("")){
         statusText.textContent = "Draw!";
+        document.getElementById("status-text").style.color = "blue";
         running = false;
     }else{
         changePlayer();
+        document.getElementById("status-text").style.color = "#000";
     }
 }
 
@@ -87,6 +90,7 @@ function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn`;
+    document.getElementById("status-text").style.color = "#000";
     cells.forEach(cell => cell.textContent = "");
     running = true;
 }
